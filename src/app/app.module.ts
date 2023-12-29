@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeaderComponent } from './components/header/header.component';
 import { PersonalInfoComponent } from './components/personal_info/personal-info/personal-info.component'
+import {MatIconModule} from '@angular/material/icon'
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { PersonalInfoComponent } from './components/personal_info/personal-info/
     MatToolbarModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

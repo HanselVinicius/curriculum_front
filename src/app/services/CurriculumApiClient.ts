@@ -7,7 +7,7 @@ import axios from "axios";
 })
 export class CurriculumApiClient {
     
-    private readonly _baseUrl: string = "todo";
+    private readonly _baseUrl: string = "borrowed";
     private axiosClient:AxiosInstance;
     
     constructor() {
