@@ -9,13 +9,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { PersonalInfoComponent } from './components/personal_info/personal-info/personal-info.component'
 import {MatIconModule} from '@angular/material/icon'
 import {MatDialogModule} from '@angular/material/dialog';
+import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PersonalInfoComponent
+    PersonalInfoComponent,
+    
   ],
   imports: [
     MatToolbarModule,
@@ -23,7 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    LoginDialogComponent
 
   ],
   providers: [],

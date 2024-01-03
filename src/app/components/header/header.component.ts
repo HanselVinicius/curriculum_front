@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class HeaderComponent {
 
-  constructor(authService: AuthService){}
+  constructor(){}
 
    public loginClick(){
     
