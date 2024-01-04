@@ -1,18 +1,20 @@
-<div class="bg-white text-black">
-    <h1 mat-dialog-title class="text-black">Entrar</h1>
+<h1 mat-dialog-title class="text-black">Entrar</h1>
+
+<div mat-dialog-content class="bg-black text-black">
     
     <div class="mb-4 px-4">
-        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nome</label>
-        <input  class="w-full px-3 py-2 border rounded-lg" placeholder="Usuário">
+        <label for="name" class="block text-white text-sm font-bold mb-2">Nome</label>
+        <input class="w-full px-3 py-2 border rounded-lg text-black" placeholder="Usuário">
     </div>
-
+  
     <div class="mb-4 px-4">
-        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Senha</label>
-        <input  class="w-full px-3 py-2 border rounded-lg" placeholder="Senha">
+        <label for="name" class="block text-white text-sm font-bold mb-2">Senha</label>
+        <input class="w-full px-3 py-2 border rounded-lg text-black" placeholder="Senha">
     </div>
 
-    <div mat-dialog-actions>
-        <button mat-button mat-dialog-close class="text-black" (click)="onConfirm()">cancelar</button>
-        <button mat-button mat-dialog-close cdkFocusInitial class="text-black" (click)="onConfirm()">Entrar</button>
-    </div>
+    <mat-dialog-actions>
+        <button mat-raised-button class="text-black" (click)="onConfirm()">Entrar</button>
+        <button mat-raised-button class="text-black" (click)="onConfirm()">Cancelar</button>
+    </mat-dialog-actions>
+  
 </div>

@@ -10,8 +10,9 @@ import { PersonalInfoComponent } from './components/personal_info/personal-info/
 import {MatIconModule} from '@angular/material/icon'
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginDialogComponent } from './components/login-dialog/login-dialog.component';
-
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,10 @@ import { LoginDialogComponent } from './components/login-dialog/login-dialog.com
     BrowserAnimationsModule,
     MatIconModule,
     MatDialogModule,
-    LoginDialogComponent
+    LoginDialogComponent,
+    MatButtonModule,
+    MatFormFieldModule,
+    FormsModule
 
   ],
   providers: [],

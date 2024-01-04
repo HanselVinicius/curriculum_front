@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CurriculumApiClient } from '../CurriculumApiClient';
 import { AxiosInstance } from 'axios';
+import User from 'src/app/model/User';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AuthService {
    }
 
 
-  public login(username:string, password:string){
+  public login(user:User){
 
   }
 
