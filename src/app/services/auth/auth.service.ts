@@ -14,8 +14,14 @@ export class AuthService {
    }
 
 
-  public login(user:User){
-
+  public login(user:User,successCallback:Function){
+    this.client.post('/login',user).then((response)=>{
+      if(response.status === 200){
+        successCallback();
+      }
+    }).catch((error)=>{
+      console.log(error);
+    });
   }
 
 }

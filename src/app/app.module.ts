@@ -13,6 +13,8 @@ import { LoginDialogComponent } from './components/login-dialog/login-dialog.com
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { NgToastModule } from 'ng-angular-popup';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     LoginDialogComponent,
     MatButtonModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    NgToastModule
 
   ],
   providers: [],

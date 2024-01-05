@@ -10,13 +10,16 @@ import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 })
 export class HeaderComponent {
 
-  constructor(private matDialog:MatDialog){}
+  constructor(private matDialog:MatDialog,private authService:AuthService){}
 
    public loginClick(){
       this.matDialog.open(LoginDialogComponent).afterClosed().subscribe(result => {
-        console.log(`Dialog result: ${result}`);
-      });
-      
+        this.authService.login(result,this.successCallback);
+      }); 
+   }
+
+   public successCallback(){
+
    }
 
 }
