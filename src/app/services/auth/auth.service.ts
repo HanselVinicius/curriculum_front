@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CurriculumApiClient } from '../CurriculumApiClient';
+import { CurriculumApiClient } from '../../infra/client/CurriculumApiClient';
 import { AxiosInstance } from 'axios';
 import User from 'src/app/model/User';
 
@@ -14,12 +14,13 @@ export class AuthService {
    }
 
 
-  public login(user:User,successCallback:Function){
-    this.client.post('/login',user).then((response)=>{
+  public login(user:User,successCallback:Function,errorCallback:Function){
+    this.client.post('/v1/auth/login',user).then((response)=>{
       if(response.status === 200){
         successCallback();
       }
     }).catch((error)=>{
+      errorCallback();
       console.log(error);
     });
   }

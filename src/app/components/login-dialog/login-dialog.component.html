@@ -4,12 +4,12 @@
     
     <div class="mb-4 px-4">
         <label for="name" class="block text-white text-sm font-bold mb-2">Nome</label>
-        <input class="w-full px-3 py-2 border rounded-lg text-black" placeholder="Usuário">
+        <input [(ngModel)]="username" class="w-full px-3 py-2 border rounded-lg text-black" placeholder="Usuário">
     </div>
   
     <div class="mb-4 px-4">
         <label for="name" class="block text-white text-sm font-bold mb-2">Senha</label>
-        <input class="w-full px-3 py-2 border rounded-lg text-black" placeholder="Senha">
+        <input  [(ngModel)]="password" class="w-full px-3 py-2 border rounded-lg text-black" placeholder="Senha" type="password">
     </div>
 
     <mat-dialog-actions>
