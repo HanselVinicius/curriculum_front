@@ -7,7 +7,7 @@ import axios from "axios";
 })
 export class CurriculumApiClient {
     
-    private readonly _baseUrl: string = "borrowed";
+    private readonly _baseUrl: string = "https://cental-apis-curriculum-back.qx7v63.easypanel.host/";
     private axiosClient:AxiosInstance;
     
     constructor() {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
@@ -8,9 +8,15 @@ import { NgToastService } from 'ng-angular-popup';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+
+  public isLogged:boolean = false;
 
   constructor(private matDialog:MatDialog,private authService:AuthService,private toast:NgToastService){
+  }
+
+  ngOnInit(): void {
+    this.isLogged = this.authService.isLogged();
   }
 
    public loginClick(){
@@ -23,7 +29,7 @@ export class HeaderComponent {
       this.toast.success({detail:"OK",summary:'Login realizado com sucesso',sticky:false, position:'topRight'});
    }
 
-   public errorCallback(){
+   public errorCallback(error:any){
       this.toast.error({detail:"ERRO",summary:'Falha ao executar login',sticky:false, position:'topRight'});
 
   }
