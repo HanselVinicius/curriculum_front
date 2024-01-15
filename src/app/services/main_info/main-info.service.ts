@@ -10,8 +10,9 @@ export class MainInfoService {
 
   constructor(private curriculumClient:CurriculumApiClient) { }
 
-  public getMainInfo(){
-    this.curriculumClient.getClient().get(MainInfoService.MAIN_INFO_ROUTE).then((response)=>{})
+  public getMainInfo(page:number,size:number): Promise<any>{
+    return this.curriculumClient.getClient().get(MainInfoService.MAIN_INFO_ROUTE,
+      {params:{page:page,size:size}});
   }
   
 

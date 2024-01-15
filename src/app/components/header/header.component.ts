@@ -21,6 +21,9 @@ export class HeaderComponent implements OnInit {
 
    public loginClick(){
       this.matDialog.open(LoginDialogComponent).afterClosed().subscribe(result => {
+        if(!result){
+            return;
+        }
         this.authService.login(result,this.successCallback.bind(this),this.errorCallback.bind(this));
       }); 
    }
