@@ -1,10 +1,10 @@
 export default class ExperienceVO{
 
-    private company:string;
-    private role:string;
-    private description:string;
-    private startDate:Date;
-    private endDate:Date;
+    public readonly company:string;
+    public readonly role:string;
+    public readonly description:string;
+    public readonly startDate:Date;
+    public readonly endDate:Date;
 
 
     constructor(company:string, role:string, description:string, startDate:Date, endDate:Date){
@@ -14,5 +14,9 @@ export default class ExperienceVO{
         this.startDate = startDate;
         this.endDate = endDate;
     }
+
+    
+
+
 
 }
