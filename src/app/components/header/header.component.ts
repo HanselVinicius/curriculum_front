@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 import { NgToastService } from 'ng-angular-popup';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   public isLogged:boolean = false;
 
-  constructor(private matDialog:MatDialog,private authService:AuthService,private toast:NgToastService){
+  constructor(private matDialog:MatDialog,private authService:AuthService,private toast:NgToastService, private router:Router){
   }
 
   ngOnInit(): void {
