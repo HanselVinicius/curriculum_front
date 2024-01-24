@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { NgToastModule } from 'ng-angular-popup';
 import { CookieService } from 'ngx-cookie-service';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
     HeaderComponent,
     PersonalInfoComponent,
     ProjectsComponent,
+    ProjectCardComponent,
     
   ],
   imports: [
