@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Project from 'src/app/model/projects/Project';
 
 @Component({
@@ -11,8 +12,10 @@ export class ProjectCardComponent implements OnInit {
   @Input()
   public project!: Project; 
 
+
   ngOnInit(): void {
     
   }
+
   
 }

@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   public isLogged:boolean = false;
 
-  constructor(private matDialog:MatDialog,private authService:AuthService,private toast:NgToastService, private router:Router){
+  constructor(private matDialog:MatDialog,private authService:AuthService,private toast:NgToastService){
   }
 
   ngOnInit(): void {
