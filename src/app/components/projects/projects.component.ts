@@ -26,6 +26,9 @@ export class ProjectsComponent implements OnInit {
         technologies: [new TecnologiaVo(1, "test", 1)]
     }
       this.projects.push(testProject);
+      
+
+
   }
 
  
